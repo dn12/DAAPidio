@@ -12,5 +12,47 @@
         android:name="net.github.dn12.dnapidio.ui.home.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/navigate_to_detail"
+            app:destination="@id/destination_detail_video"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/navigate_to_search"
+            app:destination="@id/destination_search"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_detail_video"
+        android:name="net.github.dn12.dnapidio.ui.detail.VideoDetailFragment"
+        android:label="Detail Video"
+        tools:layout="@layout/fragment_video_detail" >
+        <argument
+            android:name="videoid"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="desc"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_search"
+        android:name="net.github.dn12.dnapidio.ui.search.SearchFragment"
+        android:label="Search Video"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/navigate_to_detail"
+            app:destination="@id/destination_detail_video"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 </navigation>

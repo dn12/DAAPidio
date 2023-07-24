@@ -1,6 +1,7 @@
 
 
 <resources>
+    <string name="app_name">DnA Pideo</string>
     <string name="enable_my_location">Enable My Location</string>
     <string name="o">o</string>
     <string name="c">c</string>

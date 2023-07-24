@@ -5,6 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import net.github.dn12.network.api.YoutubeService
 import net.github.dn12.network.api.response.YoutubeListResponse
+import net.github.dn12.network.api.response.YoutubeSearchResponse
 import net.github.dn12.network.util.MyNetworkCallResult
 import net.github.dn12.network.util.MyNetworkRequestResult
 import retrofit2.Response
@@ -14,7 +15,7 @@ class YoutubeRepository(
 ) {
 
 
-    suspend fun search(q: String): MyNetworkRequestResult<Response<YoutubeListResponse>> =
+    suspend fun search(q: String): MyNetworkRequestResult<Response<YoutubeSearchResponse>> =
         withContext(Dispatchers.IO) {
             return@withContext try {
                 val resp = onlineServices.search(q = q)

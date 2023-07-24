@@ -17,27 +17,20 @@
                 android:layout_width="@dimen/dp40"
                 android:layout_height="@dimen/dp40"/>
 
-            <com.glide.slider.library.SliderLayout
-                app:layout_constraintTop_toBottomOf="@id/iv_search"
+            <androidx.appcompat.widget.AppCompatEditText
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="@dimen/dp10"
                 app:layout_constraintStart_toStartOf="parent"
-                android:id="@+id/slider"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp200"
-                 />
-            <com.glide.slider.library.indicators.PagerIndicator
-                app:layout_constraintTop_toBottomOf="@id/slider"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:id="@+id/custom_indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:gravity="center" />
+                app:layout_constraintEnd_toStartOf="@id/iv_search"
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_video"
                 android:layout_marginTop="@dimen/dp15"
-                app:layout_constraintTop_toBottomOf="@id/slider"
+                app:layout_constraintTop_toBottomOf="@id/et_search"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

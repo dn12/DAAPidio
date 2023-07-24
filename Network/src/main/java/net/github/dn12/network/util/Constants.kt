@@ -10,5 +10,6 @@ object Constants {
     const val MOSTPOPULAR = "mostPopular"
     const val TYPE_VIDEO = "video"
     const val PART_SNIPPET = "snippet"
+    const val MAX_RESULT = "10"
 
 }
